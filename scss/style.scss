@@ -1,0 +1,116 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+// -------------------------------------
+
+$color-primary: #F03000;
+$lightgray: #F0F0F0;
+$darkgrey: #888888;
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+$margin-primary: 20px;
+
+body {
+    margin-left: $margin-primary;
+    margin-right: $margin-primary;
+    font-family: $font-primary;
+    font-size: 16px;
+    color: black;
+}
+
+.header,
+.products {
+    margin: 40px 0;
+}
+
+// -------------------------------------
+
+// Header
+
+.menu {
+    list-style: none;
+    display: flex;
+    column-gap: 40px;
+    padding-left: 0;
+    flex-basis: 50%;
+    margin-top: 40px;
+}
+
+.menu__item {
+    text-decoration: none;
+    color: $color-primary;
+    font-size: 18px;
+}
+
+.menu__item--hover:hover {
+    background-color: $color-primary;
+    color: white;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+// Holiday offer
+
+.products {
+    display: grid;
+    grid-template-rows: 240px repeat(2, 150px);
+    gap: 20px;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.product__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.product__text {
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+
+.product__info {
+    margin-bottom: 0;
+    color: white;
+}
+
+.product__title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.product__price span {
+    display: inline-block;
+    background-color: $color-primary;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.product__price {
+    padding: 20px;
+}
+
