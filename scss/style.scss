@@ -24,8 +24,18 @@ body {
 }
 
 .header,
-.products {
-    margin: 40px 0;
+.products,
+.services,
+.news,
+.footer {
+    margin-bottom: 40px;
+}
+
+.lastminute__heading,
+.news__heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 // -------------------------------------
@@ -39,12 +49,14 @@ body {
     padding-left: 0;
     flex-basis: 50%;
     margin-top: 40px;
+    margin-bottom: 0;
 }
 
 .menu__item {
     text-decoration: none;
     color: $color-primary;
     font-size: 18px;
+    font-weight: bold;
 }
 
 .menu__item--hover:hover {
@@ -58,9 +70,16 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        margin-bottom: 60px;
+    }
 }
 
-
+.header__logo {
+    margin-top: 40px;
+}
 
 // Holiday offer
 
@@ -68,7 +87,13 @@ body {
     display: grid;
     grid-template-rows: 240px repeat(2, 150px);
     gap: 20px;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 380px 180px;
+    }
 }
+
 .product {
     display: flex;
     flex-direction: column;
@@ -87,19 +112,21 @@ body {
 }
 
 .product__text {
-    padding: 20px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 
 .product__info {
     margin-bottom: 0;
     color: white;
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 .product__title {
     margin-top: 0;
     margin-bottom: 15px;
     color: white;
+    padding-left: 20px;
 }
 
 .product__price span {
@@ -113,4 +140,93 @@ body {
 .product__price {
     padding: 20px;
 }
+
+@media screen and (min-width: 768px) {
+    
+    .product--big {
+        grid-column: 1 / 3;
+    }
+}
+
+// Services boxes
+
+.service {
+    display: flex;
+    align-items: center;
+    background-color: $lightgray;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.service__title {
+    color: $color-primary;
+    font-size: 18px;
+}
+
+.services {
+    display: grid;
+    grid-template-rows: repeat(4, 120px);
+    gap: 10px;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+.service__img {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.service__text {
+    padding-right: 10px;
+}
+
+
+// News
+
+.news__item {
+    background-color: $lightgray;
+    padding: 20px;
+}
+
+.news__date {
+    color: $darkgrey;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.news__title {
+    color: $color-primary;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.news__text {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.news {
+    display: grid;
+    gap: 10px;
+}
+
+
+// Footer
+
+.footer {
+    background-color: #444444;
+    text-align: center;
+}
+
+.footer__text {
+    color: white;
+    padding: 20px;
+}
+
 
