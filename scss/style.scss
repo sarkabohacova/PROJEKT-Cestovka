@@ -38,6 +38,21 @@ body {
     margin-bottom: 20px;
 }
 
+@media screen and (min-width: 960px) {
+    
+    .header,
+    .products,
+    .services,
+    .news,
+    .footer,
+    .lastminute__heading,
+    .news__heading {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1100px;
+    }
+}
+
 // -------------------------------------
 
 // Header
@@ -50,6 +65,10 @@ body {
     flex-basis: 50%;
     margin-top: 40px;
     margin-bottom: 0;
+
+    @media screen and (min-width: 960px) {
+        padding-right: 20px;
+    }
 }
 
 .menu__item {
@@ -75,10 +94,18 @@ body {
         flex-direction: row;
         margin-bottom: 60px;
     }
+
+    @media screen and (min-width: 960px) {
+        justify-content: space-between;
+    }
 }
 
 .header__logo {
     margin-top: 40px;
+
+    @media screen and (min-width: 960px) {
+        padding-left: 20px;
+    }
 }
 
 // Holiday offer
@@ -91,6 +118,11 @@ body {
     @media screen and (min-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 380px 180px;
+    }
+
+    @media screen and (min-width: 960px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 180px);
     }
 }
 
@@ -148,12 +180,22 @@ body {
     }
 }
 
+@media screen and (min-width: 960px) {
+    
+    .product--big {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
 // Services boxes
 
 .service {
     display: flex;
     align-items: center;
     background-color: $lightgray;
+    column-gap: 10px;
+    padding: 20px;
 
     @media screen and (min-width: 768px) {
         flex-direction: column;
@@ -173,17 +215,41 @@ body {
     @media screen and (min-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
+        text-align: center;
+        gap: 20px;
+    }
+
+    @media screen and (min-width: 960px) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
     }
 }
 
+
 .service__img {
-    flex-basis: 40%;
     display: flex;
     justify-content: center;
+    width: 40px;
+    margin-right: 25px;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 0;
+    }
 }
 
 .service__text {
     padding-right: 10px;
+
+    @media screen and (min-width: 768px) {
+        padding-right: 0px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    .service__info {
+        margin-bottom: 0;
+    }
 }
 
 
@@ -214,6 +280,12 @@ body {
 .news {
     display: grid;
     gap: 10px;
+
+    @media screen and (min-width: 960px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
 }
 
 

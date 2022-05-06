@@ -29,6 +29,19 @@ body {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 960px) {
+  .header,
+.products,
+.services,
+.news,
+.footer,
+.lastminute__heading,
+.news__heading {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+  }
+}
 .menu {
   list-style: none;
   display: flex;
@@ -38,6 +51,11 @@ body {
   flex-basis: 50%;
   margin-top: 40px;
   margin-bottom: 0;
+}
+@media screen and (min-width: 960px) {
+  .menu {
+    padding-right: 20px;
+  }
 }
 
 .menu__item {
@@ -65,9 +83,19 @@ body {
     margin-bottom: 60px;
   }
 }
+@media screen and (min-width: 960px) {
+  .header {
+    justify-content: space-between;
+  }
+}
 
 .header__logo {
   margin-top: 40px;
+}
+@media screen and (min-width: 960px) {
+  .header__logo {
+    padding-left: 20px;
+  }
 }
 
 .products {
@@ -79,6 +107,12 @@ body {
   .products {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 380px 180px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 180px);
   }
 }
 
@@ -135,10 +169,19 @@ body {
     grid-column: 1/3;
   }
 }
+@media screen and (min-width: 960px) {
+  .product--big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
 .service {
   display: flex;
   align-items: center;
   background-color: #F0F0F0;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  padding: 20px;
 }
 @media screen and (min-width: 768px) {
   .service {
@@ -160,19 +203,43 @@ body {
   .services {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+    text-align: center;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .services {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
   }
 }
 
 .service__img {
-  flex-basis: 40%;
   display: flex;
   justify-content: center;
+  width: 40px;
+  margin-right: 25px;
+}
+@media screen and (min-width: 768px) {
+  .service__img {
+    margin-right: 0;
+  }
 }
 
 .service__text {
   padding-right: 10px;
 }
+@media screen and (min-width: 768px) {
+  .service__text {
+    padding-right: 0px;
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .service__info {
+    margin-bottom: 0;
+  }
+}
 .news__item {
   background-color: #F0F0F0;
   padding: 20px;
@@ -198,6 +265,13 @@ body {
 .news {
   display: grid;
   gap: 10px;
+}
+@media screen and (min-width: 960px) {
+  .news {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+  }
 }
 
 .footer {
